@@ -1,0 +1,7 @@
+{
+  "name": "forth-project",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
