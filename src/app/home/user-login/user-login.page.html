@@ -1,0 +1,18 @@
+<ion-content [fullscreen]="true" class="custom-background">
+  <div id="bg">
+    <img src="../../../assets/icon/logo.png" alt="Logo" class="logo-icon">
+  </div>
+  <ion-list lines="none" class="ion-margin">
+  <ion-list-header>WELCOME !</ion-list-header>
+  <ion-item class="ion-margin">
+    <ion-input placeholder="Enter Username" type="text" clearInput="true"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-margin">
+    <ion-input placeholder="Enter Password" type="password" clearInput="true"></ion-input>
+  </ion-item>
+
+  <ion-text color="medium"> <p class="ion-margin-horizontal"> Forgot Password?</p></ion-text>
+  <ion-button class="ion-margin" routerLink="dashboard">Login</ion-button>
+</ion-list>
+</ion-content>

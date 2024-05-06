@@ -1,0 +1,106 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- <ion-title>Dashboard</ion-title> -->
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <!-- header -->
+  <div class="header">
+    <h1>Hello Doctor</h1>
+    <div class="avatar">
+      <ion-img src="../../../../assets/icon/profile-pic.png"></ion-img>
+    </div>
+  </div>
+
+  <!-- searchbar -->
+  <app-searchbar></app-searchbar>
+
+  <!-- horizontal cal -->
+  <div class="cal">
+    <div class="monthLine">
+      <div class="month">
+        <p>{{currentMonth}}  {{currentYear}}</p>
+      </div>
+      <div class="monthChange">
+        <ion-icon name="arrow-back-outline" (click)="moveDate('prev')"></ion-icon>
+        <ion-icon name="arrow-forward-outline" (click)="moveDate('next')"></ion-icon>
+      </div>
+    </div>
+
+    <div class="week">
+      <div *ngFor="let data of cells">
+        <div class="weekDay">
+          <p [ngClass]="data.isToday ? 'today':''">{{data.day}}</p>
+        </div>
+
+        <div class="weekNumber" (click)="dateClicked(data.date)">
+          <p [ngClass]="data.isToday ? 'today square':''">{{data.date}}</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- upcomings -->
+  <div>
+    <p class="events">Today Events</p>
+    
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>National Hospital of Sri Lanka, Colombo</ion-card-title>
+        <ion-card-subtitle>8 am - 10.30 am</ion-card-subtitle>
+        <ion-card-subtitle>Surgical Services</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>Coronary artery bypass graft (CABG)</ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>National Hospital of Sri Lanka, Colombo</ion-card-title>
+        <ion-card-subtitle>11 pm - 2pm</ion-card-subtitle>
+        <ion-card-subtitle>Surgical Services</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>Coronary Angioplasty (PTCA) and Stenting</ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Nawaloka Hospital, Colombo</ion-card-title>
+        <ion-card-subtitle>2.30 pm - 5.30 pm</ion-card-subtitle>
+        <ion-card-subtitle>Surgical Services</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>Valvuloplasty</ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Asiri Hospital, Colombo</ion-card-title>
+        <ion-card-subtitle>6 pm - 8 pm</ion-card-subtitle>
+        <ion-card-subtitle>Surgical Services</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>Implantation of Pacemakers and Defibrillators</ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Lanka Hospital, Colombo</ion-card-title>
+        <ion-card-subtitle>9 pm - 11 pm</ion-card-subtitle>
+        <ion-card-subtitle>Surgical Services</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>Conduct patient consultations</ion-card-content>
+    </ion-card>
+    
+    
+  </div>
+</ion-content>

@@ -11,6 +11,38 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'settings',
+    loadChildren: () => import('./Screens/settings/settings.module').then( m => m.SettingsPageModule)
+  },
+  
+  {
+    path: 'messages',
+    loadChildren: () => import('./Screens/messages/messages.module').then( m => m.MessagesPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./Screens/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'logout',
+    loadChildren: () => import('./Screens/logout/logout.module').then( m => m.LogoutPageModule)
+  },
+  {
+    path: 'dashboard1',
+    loadChildren: () => import('./Screens/dashboard1/dashboard1.module').then( m => m.Dashboard1PageModule)
+  },
+  {
+    path: 'calendar',
+    loadChildren: () => import('./Screens/calendar/calendar.module').then( m => m.CalendarPageModule)
+  },
+  {
+    path: 'cal-modal',
+    loadChildren: () => import('./Screens/cal-modal/cal-modal.module').then( m => m.CalModalPageModule)
+  },
+ 
+ 
+  
 ];
 
 @NgModule({

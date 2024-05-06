@@ -25,3 +25,27 @@
 #container a {
   text-decoration: none;
 }
+
+
+.logo-icon {
+  width: 200px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 200px; /* Example margin */
+}
+
+.custom-background {
+  --ion-background-color: var(--custom-secondary);
+}
+
+ion-list{
+  transform: translateY(25vh);
+
+  ion-button.login-button {
+    --ion-color-primary: var(--custom-primary);
+    --border-radius: 30px; 
+    --padding-start: 100px; 
+    --padding-end: 100px; 
+    font-weight: bold;
+  }
+  
+}

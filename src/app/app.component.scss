@@ -1,0 +1,22 @@
+.logo-icon {
+    width: 200px; 
+    height: auto; 
+    margin-bottom: 20px;
+  }
+
+.menu-items{
+    margin: 0px;
+
+    ion-icon{
+        margin-right: 20px;
+        color: gray;
+    }
+    ion-label{
+        color: gray;
+        font-weight: 100;
+    }
+    ion-item{
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+}
